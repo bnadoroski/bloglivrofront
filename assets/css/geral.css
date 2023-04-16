@@ -1,0 +1,550 @@
+@media screen {
+  .botaoLer {
+    --tw-text-opacity: 1;
+    color: rgb(249 105 81 / var(--tw-text-opacity));
+  }
+
+  #lerMais {
+    width: 100%;
+    float: left;
+    padding: 0 8% 3em 0;
+  }
+}
+
+.swiper_container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.swiper_wrap {
+  padding: 0px 50px;
+  position: relative;
+  display: block;
+  text-align: left;
+}
+
+.swiper-button-next {
+  margin-top: 0px;
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  width: 45px;
+  height: 45px;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  width: 45px;
+  height: 45px;
+  transform: translateY(-50%);
+  margin-top: 0px;
+}
+
+.activeTab {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.center {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.textoPequeno {
+  font-size: 10px;
+}
+
+.textoEsquerda {
+  float: left;
+  width: 100%;
+  text-align: right;
+}
+
+.text-\[\#ff5e5e\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 94 94 / var(--tw-text-opacity));
+}
+
+.fundoModal {
+  display: none;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.9;
+  background: #222;
+  z-index: 40000;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  animation-name: fadeIn_Container;
+  animation-duration: 1s;
+
+}
+
+.modal {
+  display: none;
+  top: 0;
+  min-width: 250px;
+  width: 60%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 40001;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  margin-top: 30px;
+  margin-left: 20%;
+
+  animation-name: fadeIn_Modal;
+  animation-duration: 0.8s;
+
+}
+
+.modalAddLivro {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.divSenha {
+  position: relative;
+  overflow: hidden;
+}
+
+.olhoSenha {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  transition: right 0.2s;
+}
+
+.imagemPerfil {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.imagemPesquisa {
+  width: 230px;
+  height: 170px;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.tooltip .left {
+  min-width: 70px;
+  top: 50%;
+  right: 100%;
+  margin-right: 20px;
+  transform: translate(0, -50%);
+  padding: 10px 20px;
+  color: #FF66A9;
+  background-color: #FFE6F1;
+  font-weight: normal;
+  font-size: 13px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 99999999;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.tooltip:hover .left {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .left i {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -12px;
+  width: 12px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.tooltip .left i::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: #FFE6F1;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tooltip .top {
+  min-width:100px; 
+  top:-10px;
+  left:50%;
+  transform:translate(-50%, -100%);
+  padding:10px 20px;
+  color: #CCCC;
+  background-color:#EEEEEE;
+  font-weight:normal;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:99999999;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  display:none;
+}
+
+.tooltip:hover .top {
+  display:flex;
+}
+
+.tooltip .top:hover {
+  display:flex;
+}
+
+.tooltip .top i {
+  position:absolute;
+  top:100%;
+  left:50%;
+  margin-left:-12px;
+  width:24px;
+  height:12px;
+  overflow:hidden;
+}
+
+.tooltip .top .iTooltip::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(45deg);
+  background-color:#EEEEEE;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+.tooltip .top .fundo {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:12px;
+  left:12px;
+}
+
+.tooltip .top .fundo::after {
+  content:'';
+  position:absolute;
+  width:100%;
+  height:12px;
+  left:12px;
+}
+
+#estrelas {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.tamanhoEstrela {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.estrelaPreenchida {
+  color: #FF66A9;
+}
+
+.estrela {
+  cursor:pointer;
+  transition: all 0.3s ease-in;
+}
+
+.estrela:hover ~ .estrela,
+.estrela:hover {
+  color: #FF66A9;
+}
+
+.inner-1 {
+  float: left;
+  width: 65%;
+  margin-right: 0px;
+}
+
+.inner-2 {
+  float: right;
+  width: 35%;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+}
+
+.inner-3 {
+  float: right;
+  width: 35%;
+}
+
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.bg-vermelho {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.linha {
+  border-top: 1px solid;
+  border-top-color: #FF66A9;
+    margin-top: 1rem !important;
+}
+
+.iconDelete {
+  float: right;
+  display: block;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.pdr {
+  padding-right: 10px;
+}
+
+.pdl {
+  display: inline;
+  padding-left: 10px;
+}
+
+.pdt {
+  padding-top: 1.5rem;
+}
+
+.pdb {
+  padding-bottom: 1.5rem;
+}
+
+.imgMini {
+  display: inline;
+  width: 25px;
+  height: 25px;
+}
+
+.marginTop8 {
+  margin-top: 8px;
+}
+
+.marginTop11 {
+  margin-top: 11px;
+}
+
+.marginLeft10perc {
+  margin-left: 10%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.position\:fixed {
+  position: fixed;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.exibirConectado {
+  display: none !important;
+}
+
+.tagGatilhoInserido {
+  height: 30px;
+  width: 80%;    
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+.erroAddLivro {
+  height: 30px;
+  width: 100%;    
+  margin-top: 1%;
+}
+
+.autocomplete {
+  position: relative;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 20%;
+  border-radius: 0.25rem;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+  text-align: left;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+.alignTagInput {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.inputTag {
+  position: relative;
+  display: inline-block;
+}
+
+.w-\[425px\] {
+  width: 425px;
+}
+
+.w-\[460px\] {
+  width: 460px;
+}
+
+.image-upload>input {
+  display: none;
+}
+
+.modal-body{
+  height: 400px;
+  overflow: auto;    
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.modal-body::before::after{
+box-sizing: border-box;
+}
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(0.3rem - 1px);
+  border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+.modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  padding: 1rem 1rem;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modalSecundario {
+  top: 10%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-3{
+  margin-top: 1rem!important;
+}
+
+.mr-3{
+  margin-right: 2%;
+}
+
+@keyframes fadeIn_Modal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_Container {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.9;
+  }
+}
